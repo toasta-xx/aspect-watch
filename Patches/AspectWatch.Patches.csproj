@@ -1,0 +1,129 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.1</TargetFramework>
+    <AssemblyName>AspectWatch.Patches</AssemblyName>
+    <RootNamespace>AspectWatch</RootNamespace>
+    <LangVersion>latest</LangVersion>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
+    <NoWarn>CS0618;CS0649;CS0169;CS0414;CS0108;CS0114</NoWarn>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <GorillaTagPath Condition="'$(GorillaTagPath)' == ''">C:\Program Files (x86)\Steam\steamapps\common\Gorilla Tag</GorillaTagPath>
+    <ManagedPath>$(GorillaTagPath)\Gorilla Tag_Data\Managed</ManagedPath>
+    <CorePath>$(GorillaTagPath)\BepInEx\core</CorePath>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Include="**\*.cs" Exclude="obj\**;bin\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="BepInEx.AssemblyPublicizer.MSBuild" Version="0.4.3">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="0Harmony">
+      <HintPath>$(CorePath)\0Harmony.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="Assembly-CSharp" publicize="true">
+      <HintPath>$(ManagedPath)\Assembly-CSharp.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="Assembly-CSharp-firstpass" publicize="true">
+      <HintPath>$(ManagedPath)\Assembly-CSharp-firstpass.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="Photon3Unity3D" publicize="true">
+      <HintPath>$(ManagedPath)\Photon3Unity3D.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="PhotonRealtime" publicize="true">
+      <HintPath>$(ManagedPath)\PhotonRealtime.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="PhotonUnityNetworking" publicize="true">
+      <HintPath>$(ManagedPath)\PhotonUnityNetworking.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="PhotonVoice" publicize="true">
+      <HintPath>$(ManagedPath)\PhotonVoice.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="PhotonVoice.API" publicize="true">
+      <HintPath>$(ManagedPath)\PhotonVoice.API.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="PlayFab" publicize="true">
+      <HintPath>$(ManagedPath)\PlayFab.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="Backtrace.Unity">
+      <HintPath>$(ManagedPath)\Backtrace.Unity.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="LIV.LCK" publicize="true">
+      <HintPath>$(ManagedPath)\LIV.LCK.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="LIV.LCK_GorillaTag" publicize="true">
+      <HintPath>$(ManagedPath)\LIV.LCK_GorillaTag.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="Modio" publicize="true">
+      <HintPath>$(ManagedPath)\Modio.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="Modio.Unity">
+      <HintPath>$(ManagedPath)\Modio.Unity.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="Unity.TextMeshPro">
+      <HintPath>$(ManagedPath)\Unity.TextMeshPro.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="UnityEngine">
+      <HintPath>$(ManagedPath)\UnityEngine.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="UnityEngine.CoreModule">
+      <HintPath>$(ManagedPath)\UnityEngine.CoreModule.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="UnityEngine.PhysicsModule">
+      <HintPath>$(ManagedPath)\UnityEngine.PhysicsModule.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="UnityEngine.AudioModule">
+      <HintPath>$(ManagedPath)\UnityEngine.AudioModule.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="UnityEngine.UIModule">
+      <HintPath>$(ManagedPath)\UnityEngine.UIModule.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="UnityEngine.UI">
+      <HintPath>$(ManagedPath)\UnityEngine.UI.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="UnityEngine.XRModule">
+      <HintPath>$(ManagedPath)\UnityEngine.XRModule.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="UnityEngine.VRModule">
+      <HintPath>$(ManagedPath)\UnityEngine.VRModule.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="Unity.RenderPipelines.Universal.Runtime">
+      <HintPath>$(ManagedPath)\Unity.RenderPipelines.Universal.Runtime.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+  </ItemGroup>
+
+</Project>
