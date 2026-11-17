@@ -1,6 +1,6 @@
 # Aspect Shadow Watch
 
-A BepInEx mod menu for Gorilla Tag, brought back from the dead.
+An old gen menu brought back from the dead.
 
 Aspect Shadow Watch is a revival of the original **Aspect Shadow Watch** menu. The goal was
 never to redesign it. The original look, the mod names, the text, and the layout are all
@@ -71,15 +71,15 @@ The menu is a single-button pager. Each page is one mod, toggled on or off.
 | 15 | Fly |
 | 16 | Sticky Platforms |
 | 17 | Platform RGB |
-| 18 | Slow + Vibrate Gun `[MASTER]` |
-| 19 | Slow + Vibrate All `[MASTER]` |
-| 20 | Sound Spammer `[MASTER]` |
+| 18 | Slow + Vibrate Gun `[NW]` |
+| 19 | Slow + Vibrate All `[NW]` |
+| 20 | Sound Spammer `[NW]` | 
 | 21 | Anti Ban |
 | 22 | Anti Report |
 | 23 | Report Log |
 | 24 | Day / Night |
 
-Mods marked `[MASTER]` require you to be the room's master client.
+Mods marked `[NW]` mean they dont work, and may be fixed to work.
 
 ---
 
